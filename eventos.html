@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Escola Estadual Cívico-Militar 29 de Julho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+
+    <header>
+        <!-- Barra superior institucional -->
+        <div class="barra-superior">
+            <div class="container flex-between">
+                <span class="sigla-topo">ECIM 29 de Julho — Confresa/MT</span>
+                <nav class="menu-principal">
+                    <a href="index.html">Início</a>
+                    <a href="horario.html">Horários</a>
+                    <a href="Professores.html">Professores</a>
+                    <a href="eventos.html" class="ativo">Eventos</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Cabeçalho oficial com brasões -->
+        <div class="cabecalho-oficial">
+            <div class="container flex-between">
+                <div class="identidade-escola">
+                    <img src="escola.jpg" alt="Brasão da Escola 29 de Julho" class="logo-escola">
+                    <div class="textos-titulo">
+                        <span class="subtitulo-rede">Rede Estadual de Ensino • Modelo Cívico-Militar</span>
+                        <h1 class="titulo-escola">Escola 29 de Julho</h1>
+                    </div>
+                </div>
+                <img src="bandeira.jpg" alt="Bandeira do Município" class="logo-cidade">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Faixa de apresentação -->
+        <section class="banner-institucional">
+            <div class="container">
+                <div class="conteudo-banner">
+                    <h2>Eventos</h2>
+                    <p>Acompanhe os eventos, datas importantes e atividades da escola.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container layout-portal">
+
+            <!-- Menu lateral -->
+            <aside class="menu-lateral">
+                <h3 class="titulo-lateral">Menu</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="horario.html"><i class="fa-regular fa-clock"></i> Horários</a></li>
+                    <li><a href="Professores.html"><i class="fa-solid fa-user-group"></i> Professores</a></li>
+                    <li><a href="eventos.html" class="ativo"><i class="fa-regular fa-calendar"></i> Eventos</a></li>
+                    <li><a href="projetos.html"><i class="fa-solid fa-book-open"></i> Projetos</a></li>
+                    <li><a href="noticias.html"><i class="fa-regular fa-newspaper"></i> Notícias</a></li>
+                    <li><a href="sobre.html"><i class="fa-solid fa-graduation-cap"></i> Sobre a Escola</a></li>
+                </ul>
+            </aside>
+
+            <!-- Conteúdo -->
+            <section class="painel-eventos">
+                <div class="cabecalho-painel">
+                    <div>
+                        <h3>Próximos Eventos</h3>
+                        <p>Datas e horários das atividades programadas.</p>
+                    </div>
+                    <a href="#calendario" class="link-leia-mais">Ver calendário completo &rarr;</a>
+                </div>
+
+                <div id="lista-eventos" class="lista-eventos"></div>
+
+                <div class="duas-colunas" id="calendario">
+                    <div class="caixa-calendario">
+                        <h4><i class="fa-regular fa-calendar-check"></i> Calendário Escolar</h4>
+                        <p>Confira o calendário completo do ano letivo.</p>
+                        <a href="calendario.html" class="btn-oficial">Acessar calendário</a>
+                    </div>
+
+                    <div class="aviso-institucional">
+                        <strong>"Disciplina hoje, conquistas amanhã."</strong>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="rodape-oficial">
+        <div class="container rodape-grid">
+            <div class="coluna-rodape">
+                <h4>Escola Cívico-Militar 29 de Julho</h4>
+                <p>Educação, disciplina e cidadania.</p>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </div>
+
+            <div class="coluna-rodape">
+                <h4>Atendimento e Localização</h4>
+                <address>
+                    <p><strong>Endereço:</strong> Rua Iporá, nº 6, Centro / Zona Urbana, Confresa - MT</p>
+                    <p><strong>Telefone:</strong> (66) 98425-4567</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:Escola29@Gmail.com">Escola29@Gmail.com</a></p>
+                </address>
+            </div>
+        </div>
+
+        <div class="rodape-base">
+            <div class="container">
+                <p>&copy; 2026 Escola Estadual Cívico-Militar 29 de Julho. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="eventos.js"></script>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos Escolares</title>
+
+    <style>
+.painel-eventos .cabecalho-painel {
+    align-items: flex-end;
+}
+
+.lista-eventos {
+    border: 1px solid #d0d7de;
+    margin-bottom: 30px;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #d0d7de;
+    background-color: #ffffff;
+}
+
+.evento:last-child {
+    border-bottom: none;
+}
+
+.evento:nth-child(even) {
+    background-color: #f4f6f9;
+}
+
+.evento:hover {
+    background-color: #e9eef5;
+}
+
+.evento-data {
+    width: 64px;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #0c2340;
+    color: #ffffff;
+    border-bottom: 3px solid #c59b27;
+    padding: 8px 0;
+}
+
+.evento-data strong {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.evento-data span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.evento-foto {
+    width: 110px;
+    height: 70px;
+    flex-shrink: 0;
+    object-fit: cover;
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e1;
+}
+
+.evento-info {
+    flex: 1;
+}
+
+.evento-info h4 {
+    font-size: 1.05rem;
+    color: #0c2340;
+    margin-bottom: 3px;
+}
+
+.evento-info .hora {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #222222;
+}
+
+.evento-info .desc {
+    font-size: 0.88rem;
+    color: #4a5568;
+}
+
+/* Calendário + frase */
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.caixa-calendario {
+    border: 1px solid #d0d7de;
+    border-top: 4px solid #0c2340;
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+.caixa-calendario h4 {
+    font-size: 1.1rem;
+    color: #0c2340;
+    margin-bottom: 8px;
+}
+
+.caixa-calendario h4 i {
+    margin-right: 6px;
+}
+
+.caixa-calendario p {
+    font-size: 0.92rem;
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+
+.duas-colunas .aviso-institucional {
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: #0c2340;
+}
+
+@media (max-width: 768px) {
+    .evento {
+        flex-wrap: wrap;
+    }
+
+    .evento-foto {
+        display: none;
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+}
+       </style>
+
+</head>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

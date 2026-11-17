@@ -1,80 +1,1296 @@
-*{
-    font-family: "Poppins", sans-serif;
+/* Reset básico */
+* {
+    font-family: "Roboto", Arial, sans-serif;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
-    background-color: #b58f8f15;
+body {
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.5;
 }
 
-header{
-    background-color: #b58f8f15;
+/* Container padrão para alinhar todo o site na mesma margem */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.teto-total{
+.flex-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.barra-superior {
+    background-color: #08182b;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #c59b27;
+     /* Filete dourado institucional */
+}
+
+.sigla-topo {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+}
+
+.menu-principal {
+    display: flex;
+}
+
+.menu-principal a {
+    color: #e2e8f0;
+    padding: 12px 18px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.ativo {
     background-color: #0c2340;
-    padding: 10px;
+    color: #ffffff;
 }
 
-.teto{
+.cabecalho-oficial {
+    background-color: #f4f6f9;
+    padding: 25px 0;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.identidade-escola {
     display: flex;
-    background-color: #0C2340;
-    color: #FFFFFF;
     align-items: center;
-    gap: 25px;
-    margin: 0px 40px;
+    gap: 18px;
 }
 
-.teto a{
-    color: #FFFFFF;
+.logo-escola {
+    height: 95px;
+    width: 95px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 4px;
 }
 
-.logo-escola{
-height: 7rem;
-width: 7rem;
+.logo-cidade {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 3px;
 }
 
-.logo-cidade{
-height: 5rem;
-width: 7rem;
+.subtitulo-rede {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #4a5568;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-.epicteto{
-    color: #FFFFFF;
+.titulo-escola {
+    font-size: 1.9rem;
+    color: #0c2340;
+    font-weight: 700;
+    margin-top: 2px;
 }
 
-.parte-do-titulo{
-    padding: 25px;
-    background-color: #F4F6F9;
+/* =========================================
+   BANNER PRINCIPAL
+   ========================================= */
+.banner-institucional {
+    background-color: #0c2340;
+    color: #ffffff;
+    padding: 45px 0;
+    border-bottom: 4px solid #c59b27;
+}
+
+.conteudo-banner {
+    max-width: 700px;
+}
+
+.conteudo-banner h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.conteudo-banner p {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    margin-bottom: 22px;
+}
+
+.btn-oficial {
+    display: inline-block;
+    background-color: #c59b27;
+    color: #08182b;
+    font-weight: 700;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #b0881e;
+}
+
+.btn-oficial:hover {
+    background-color: #d6aa32;
+}
+
+/* =========================================
+   SEÇÕES DE CONTEÚDO (ESTRUTURA TABULAR/RETA)
+   ========================================= */
+.secao-acesso {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.grade-informacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #d0d7de; /* Borda externa única como tabela */
+}
+
+.bloco-info {
+    padding: 28px 24px;
+    border-right: 1px solid #d0d7de;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.img-h1{
-    display: flex;
+.bloco-info:last-child {
+    border-right: none;
 }
 
-.titulo-escola h1, h2{
+.bloco-info h3 {
+    font-size: 1.15rem;
+    color: #0c2340;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0c2340;
     display: flex;
-    margin: 5px 0px;
+    align-items: center;
+    gap: 8px;
 }
 
-.img-h1 {
-    display: flex;
-    align-items: center; 
-    gap: 15px;           
+.bloco-info p {
+    font-size: 0.95rem;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
+.link-leia-mais {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0c2340;
+    text-transform: uppercase;
+}
 
-.img-h1 div {
+.link-leia-mais:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* =========================================
+   RODAPÉ INSTITUCIONAL
+   ========================================= */
+.rodape-oficial {
+    background-color: #0c2340;
+    color: #ffffff;
+    border-top: 4px solid #c59b27;
+    font-size: 0.92rem;
+}
+
+.rodape-grid {
     display: flex;
-    flex-direction: column; 
+    justify-content: space-between;
+    padding: 35px 20px;
+    gap: 40px;
+}
+
+.coluna-rodape h4 {
+    font-size: 1.05rem;
+    color: #c59b27;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.coluna-rodape address {
+    font-style: normal;
+}
+
+.coluna-rodape p {
+    margin-bottom: 6px;
+    color: #e2e8f0;
+}
+
+.coluna-rodape a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.redes-sociais {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+    background-color: #08182b;
+    padding: 8px 14px;
+    border: 1px solid #2b4566;
+    font-size: 0.88rem;
+}
+
+.redes-sociais a:hover {
+    background-color: #163761;
+}
+
+.rodape-base {
+    background-color: #08182b;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    border-top: 1px solid #1e3a5f;
+}
+
+/* =========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================= */
+@media (max-width: 768px) {
+    .flex-between,
+    .rodape-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .identidade-escola {
+        flex-direction: column;
+    }
+
+    .grade-informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .bloco-info {
+        border-right: none;
+        border-bottom: 1px solid #d0d7de;
+    }
+
+    .bloco-info:last-child {
+        border-bottom: none;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   PÁGINAS INTERNAS (PROFESSORES / HORÁRIOS)
+   ========================================= */
+.cabecalho-pagina {
+    background-color: #0c2340;
+    color: #ffffff;
+    padding: 30px 0;
+    border-bottom: 4px solid #c59b27;
+}
+
+.caminho-pagina {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.caminho-pagina a {
+    color: #c59b27;
+}
+
+.caminho-pagina a:hover {
+    text-decoration: underline;
+}
+
+.cabecalho-pagina h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cabecalho-pagina p {
+    font-size: 0.98rem;
+    color: #e2e8f0;
+}
+
+.conteudo-interno {
+    padding: 45px 0 60px 0;
+    background-color: #ffffff;
+}
+
+.titulo-secao-interna {
+    font-size: 1.25rem;
+    color: #0c2340;
+    border-left: 4px solid #c59b27;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Grade de Direção e Coordenação */
+.grade-gestao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #d0d7de;
+    margin-bottom: 45px;
+    background-color: #f8fafc;
+}
+
+.item-gestao {
+    padding: 22px 20px;
+    border-right: 1px solid #d0d7de;
+}
+
+.item-gestao:last-child {
+    border-right: none;
+}
+
+.cargo-tag {
+    display: inline-block;
+    background-color: #0c2340;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.item-gestao h4 {
+    font-size: 1.08rem;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.item-gestao p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.turno-info {
+    display: block;
+    font-size: 0.82rem;
+    color: #0c2340;
+    font-weight: 500;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 8px;
+}
+
+/* Tabela Institucional de Professores */
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #d0d7de;
+    margin-bottom: 25px;
+}
+
+.tabela-institucional {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.tabela-institucional thead {
+    background-color: #0c2340;
+    color: #ffffff;
+}
+
+.tabela-institucional th {
+    padding: 14px 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #1e3a5f;
+}
+
+.tabela-institucional th:last-child {
+    border-right: none;
+}
+
+.tabela-institucional td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #d0d7de;
+    border-right: 1px solid #e2e8f0;
+    color: #222222;
+}
+
+.tabela-institucional td:last-child {
+    border-right: none;
+}
+
+/* Efeito zebra clássico de portais educacionais */
+.tabela-institucional tbody tr:nth-child(even) {
+    background-color: #f4f6f9;
+}
+
+.tabela-institucional tbody tr:hover {
+    background-color: #e9eef5;
+}
+
+/* Caixa de aviso simples com borda lateral */
+.aviso-institucional {
+    background-color: #f4f6f9;
+    border: 1px solid #d0d7de;
+    border-left: 4px solid #0c2340;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+/* Responsividade da página de professores */
+@media (max-width: 768px) {
+    .grade-gestao {
+        grid-template-columns: 1fr;
+    }
+
+    .item-gestao {
+        border-right: none;
+        border-bottom: 1px solid #d0d7de;
+    }
+
+    .item-gestao:last-child {
+        border-bottom: none;
+    }
+}
+
+/* =========================================
+   LAYOUT COM MENU LATERAL (HORÁRIOS / PORTAL)
+   ========================================= */
+.layout-portal {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    align-items: start;
+}
+
+/* Menu Lateral */
+.menu-lateral {
+    border: 1px solid #d0d7de;
+    background-color: #f8fafc;
+}
+
+.titulo-lateral {
+    background-color: #0c2340;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #c59b27;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral li {
+    border-bottom: 1px solid #d0d7de;
+}
+
+.menu-lateral li:last-child {
+    border-bottom: none;
+}
+
+.menu-lateral a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    color: #222222;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background-color 0.15s;
+}
+
+.menu-lateral a i {
+    width: 16px;
+    color: #0c2340;
+}
+
+.menu-lateral a:hover {
+    background-color: #e9eef5;
+}
+
+.menu-lateral a.ativo {
+    background-color: #ffffff;
+    color: #0c2340;
+    font-weight: 700;
+    border-left: 4px solid #c59b27;
+}
+
+/* Abas Superiores */
+.abas-navegacao {
+    display: flex;
+    border-bottom: 2px solid #0c2340;
+    margin-bottom: 25px;
+    gap: 4px;
+}
+
+.aba-btn {
+    background-color: #f4f6f9;
+    border: 1px solid #d0d7de;
+    border-bottom: none;
+    padding: 11px 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #4a5568;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aba-btn:hover {
+    background-color: #e2e8f0;
+    color: #0c2340;
+}
+
+.aba-btn.ativo {
+    background-color: #0c2340;
+    color: #ffffff;
+    border-color: #0c2340;
+}
+
+/* Cabeçalho do Painel e Filtros */
+.cabecalho-painel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d0d7de;
+    gap: 15px;
+}
+
+.cabecalho-painel h3 {
+    font-size: 1.25rem;
+    color: #0c2340;
+    margin-bottom: 4px;
+}
+
+.cabecalho-painel p {
+    font-size: 0.92rem;
+    color: #4a5568;
+}
+
+.filtros-turma {
+    display: flex;
+    gap: 10px;
+}
+
+.filtros-turma select {
+    padding: 8px 12px;
+    font-size: 0.92rem;
+    border: 1px solid #94a3b8;
+    background-color: #ffffff;
+    color: #111827;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filtros-turma select:focus {
+    outline: 2px solid #0c2340;
+}
+
+.linha-intervalo td {
+    background-color: #e2e8f0 !important;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #0c2340;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+.oculto {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .layout-portal {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-painel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filtros-turma {
+        width: 100%;
+    }
+
+    .filtros-turma select {
+        flex: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- BARRA SUPERIOR --- */
+.top-bar {
+    background-color: #082f63;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    font-size: 0.85rem;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-pagina {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.top-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: 0.2s;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* --- CABEÇALHO INSTITUCIONAL --- */
+.main-header {
+    background-color: #ffffff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-crest {
+    width: 66px;
+    height: 66px;
+    background: radial-gradient(circle, #103d7a 0%, #07254d 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    font-size: 2rem;
+    border: 3px solid #94a3b8;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+.logo-crest.small {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+}
+
+.brand-area h1 {
+    color: #082f63;
+    font-size: 1.55rem;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.brand-area p {
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.motto-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #082f63;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding-right: 20px;
+    border-right: 1px solid #cbd5e1;
+}
+
+.motto-box i {
+    font-size: 2.1rem;
+}
+
+.flag-box {
+    width: 74px;
+    height: 46px;
+    display: flex;
+    border: 1px solid #cbd5e1;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.flag-blue {
+    width: 40%;
+    background-color: #082f63;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+.flag-stripes {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stripe-white {
+    flex: 1;
+    background-color: #ffffff;
+}
+
+.stripe-blue {
+    flex: 1;
+    background-color: #082f63;
+}
+
+/* --- BANNER AZUL --- */
+.hero-banner {
+    background: linear-gradient(90deg, #072957 0%, #0c4187 65%, #165bb5 100%);
+    color: #ffffff;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.hero-icon {
+    font-size: 3.4rem;
+    opacity: 0.95;
+}
+
+.hero-content h2 {
+    font-size: 1.85rem;
+    margin-bottom: 4px;
+}
+
+.hero-content p {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    line-height: 1.4;
+}
+
+.hero-watermark {
+    font-size: 7.5rem;
+    opacity: 0.12;
+    position: absolute;
+    right: 45px;
+}
+
+/* --- ÁREA PRINCIPAL --- */
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1360px;
+    margin: 24px auto;
+    padding: 0 24px;
+    gap: 24px;
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #082f63;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.92rem;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #e2e8f0;
+}
+
+.sidebar a.active {
+    background-color: #082f63;
+    color: #ffffff;
+}
+
+.sidebar a .arrow {
+    margin-left: auto;
+    font-size: 0.75rem;
+}
+
+/* Conteúdo e Abas */
+.content-area {
+    flex: 1;
+}
+
+.tabs-header {
+    display: flex;
+    gap: 6px;
+}
+
+.tab-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    background-color: #e2e8f0;
+    color: #082f63;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background-color: #082f63;
+    color: #ffffff;
+}
+
+.tab-card {
+    background-color: #ffffff;
+    border-radius: 0 8px 8px 8px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card-top h3 {
+    color: #082f63;
+    font-size: 1.35rem;
+}
+
+.card-top p {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+}
+
+.filters select {
+    padding: 8px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #082f63;
+    font-weight: 500;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.filters select:focus {
+    border-color: #082f63;
+}
+
+/* Tabela */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+thead th {
+    background-color: #082f63;
+    color: #ffffff;
+    padding: 12px 10px;
+    font-weight: 600;
+}
+
+thead th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+thead th:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+tbody td {
+    padding: 11px 10px;
+    border: 1px solid #e2e8f0;
+    color: #1e3a8a;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+tbody td:first-child {
+    font-weight: 600;
+    color: #334155;
+    background-color: #f1f5f9;
+}
+
+/* Grid de Professores */
+.professores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+.prof-card {
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #082f63;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f8fafc;
+    transition: transform 0.2s;
+}
+
+.prof-card:hover {
+    transform: translateY(-3px);
+}
+
+.prof-card h4 {
+    color: #082f63;
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+}
+
+.prof-card span {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+/* --- RODAPÉ --- */
+.main-footer {
+    background-color: #072957;
+    color: #ffffff;
+    padding: 28px 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-brand p {
+    font-size: 0.82rem;
+    color: #cbd5e1;
+}
+
+.footer-pillars {
+    display: flex;
+    gap: 36px;
+}
+
+.pillar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+}
+
+.pillar i {
+    font-size: 1.45rem;
+    color: #93c5fd;
+}
+
+.footer-quote {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #e2e8f0;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .main-header, .top-bar, .main-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .motto-box {
+        border-right: none;
+        padding-right: 0;
+    }
+    .footer-quote {
+        text-align: center;
+    }
+} 
+
+    /* =========================================
+   PÁGINA DE PROJETOS E NOTÍCIAS (CARDS)
+   ========================================= */
+.conteudo-interno .titulo-secao-interna {
+    font-size: 1.75rem;
+    color: #08182b;
+    border-left: 6px solid #0c2340;
+    padding-left: 14px;
+    margin-bottom: 24px;
+    text-transform: none;
+    font-weight: 700;
+}
+
+.conteudo-interno .grade-informacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    border: none;
+}
+
+.conteudo-interno .bloco-info {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0 0 22px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    justify-content: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.conteudo-interno .bloco-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-interno .bloco-info img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.conteudo-interno .bloco-info h3 {
+    font-size: 1.15rem;
+    color: #08182b;
+    margin: 0 20px 8px 20px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.conteudo-interno .bloco-info p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0 20px;
+}
+
+.conteudo-interno .link-leia-mais {
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    text-transform: none;
+    font-size: 0.95rem;
+    color: #0c2340;
+}
+
+@media (max-width: 768px) {
+    .conteudo-interno .grade-informacoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grade-informacoe .bloco-info img {
+    width: 100%;
+    height: 200px; /* Altura fixa uniforme para todos os cards */
+    aspect-ratio: 16 / 9; /* Mantém proporção widescreen padrão */
+    object-fit: cover; /* Preenche o espaço sem esticar ou achatar a foto */
+    object-position: center; /* Centraliza o foco da imagem */
+    display: block;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;}
+
+.bloco-info img {
+        width: 100%;
+        height: 190px;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .campo-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo-filtro label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0c2340;
+    letter-spacing: 0.4px;
+}
+
+.logo-escola {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.logo-escola.small {
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+}
+.secao-acesso {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("novo\ fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secao-acesso-1 {
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("fundo-noticias.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

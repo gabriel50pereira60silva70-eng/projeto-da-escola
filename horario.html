@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários das Turmas — Escola Cívico-Militar 29 de Julho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <div class="barra-superior">
+        <div class="container flex-between">
+            <span class="sigla-topo">ECIM 29 de Julho — Confresa/MT</span>
+            <nav class="menu-principal">
+                <a href="index.html">Início</a>
+                <a href="horarios.html" class="ativo">Horários</a>
+                <a href="professores.html">Professores</a>
+                <a href="eventos.html">Eventos</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Institucional -->
+    <header class="cabecalho-oficial">
+        <div class="container flex-between">
+            <div class="identidade-escola">
+                <img src="escola.jpg" alt="Brasão da Escola 29 de Julho" class="logo-escola">
+                <div class="textos-titulo">
+                    <span class="subtitulo-rede">Rede Estadual de Ensino • Modelo Cívico-Militar</span>
+                    <h1 class="titulo-escola">Escola 29 de Julho</h1>
+                </div>
+            </div>
+            <img src="bandeira.jpg" alt="Bandeira do Município" class="logo-cidade">
+        </div>
+    </header>
+
+    <!-- Faixa de Título da Página -->
+    <section class="cabecalho-pagina">
+        <div class="container">
+            <nav class="caminho-pagina">
+                <a href="index.html">Início</a> / <span>Horários</span>
+            </nav>
+            <h2>Horários das Turmas</h2>
+            <p>Consulte a grade semanal de aulas por turno e turma — Ano Letivo 2026.</p>
+        </div>
+    </section>
+
+    <!-- Área Principal -->
+    <main class="conteudo-interno">
+        <div class="container">
+            
+            <div class="cabecalho-painel">
+                <div>
+                    <h3>Quadro Semanal de Aulas</h3>
+                    <p>Selecione o turno e a turma para visualizar os horários correspondentes.</p>
+                </div>
+
+                <!-- Filtros em cascata: Turno -> Turma -->
+                <div class="filtros-turma">
+                    <div class="campo-filtro">
+                        <label for="select-turno">Turno:</label>
+                        <select id="select-turno">
+                            <option value="matutino">Matutino (Manhã)</option>
+                            <option value="vespertino">Vespertino (Tarde)</option>
+                            <option value="noturno">Noturno (Noite)</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-filtro">
+                        <label for="select-turma">Turma:</label>
+                        <select id="select-turma">
+                            <!-- Preenchido automaticamente conforme o turno -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table class="tabela-institucional">
+                    <thead>
+                        <tr>
+                            <th>Horário</th>
+                            <th>Segunda-feira</th>
+                            <th>Terça-feira</th>
+                            <th>Quarta-feira</th>
+                            <th>Quinta-feira</th>
+                            <th>Sexta-feira</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-corpo">
+                        <!-- Preenchido via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="aviso-institucional">
+                <p><strong>Observação:</strong> Os alunos devem comparecer à formatura cívica com 10 minutos de antecedência ao início do respectivo turno, devidamente uniformizados.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé Oficial -->
+    <footer class="rodape-oficial">
+        <div class="container rodape-grid">
+            <div class="coluna-rodape">
+                <h4>Escola Cívico-Militar 29 de Julho</h4>
+                <p>Educação, disciplina e cidadania.</p>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </div>
+           
+            <div class="coluna-rodape">
+                <h4>Atendimento e Localização</h4>
+                <address>
+                    <p><strong>Endereço:</strong> Rua Iporá, nº 6, Centro / Zona Urbana, Confresa - MT</p>
+                    <p><strong>Telefone:</strong> (66) 98425-4567</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:Escola29@Gmail.com">Escola29@Gmail.com</a></p>
+                </address>
+            </div>
+        </div>
+
+        <div class="rodape-base">
+            <div class="container">
+                <p>&copy; 2026 Escola Estadual Cívico-Militar 29 de Julho. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="horário.js"></script>
+</body>
+</html>

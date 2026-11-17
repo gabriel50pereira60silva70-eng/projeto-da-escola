@@ -3,121 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projetos e Notícias - Escola Estadual Cívico-Militar 29 de Julho</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
       
-<header>
-
-
-    <div class="teto-total">
-
-    <h2 class="epicteto">29 de Julho</h2>
-
-        <div class="teto">
-
-            <a href="#">Inicio</a>
-            <a href="#">Horários</a>
-            <a href="#">Professores</a>
-            <a href="#">Eventos</a>
-        </div>
-    </div>
-
-        <div class="parte-do-titulo">
-            <div class="img-h1">
-                <img src="escola.jpg" alt="" class="logo-escola">
-                <h1 class="titulo-escola"></h1>
-                <h2 class="titulo-escola">civico militar 29 de julho</h2>
+    <header>
+        <!-- Barra superior institucional -->
+        <div class="barra-superior">
+            <div class="container flex-between">
+                <span class="sigla-topo">ECIM 29 de Julho — Confresa/MT</span>
+                <nav class="menu-principal">
+                    <a href="index.html">Início</a>
+                    <a href="horario.html">Horários</a>
+                    <a href="Professores.html">Professores</a>
+                    <a href="eventos.html">Eventos</a>
+                </nav>
             </div>
-            <img src="bandeira.jpg" alt="" class="logo-cidade">
+        </div>
+
+        <!-- Cabeçalho oficial com brasões -->
+        <div class="cabecalho-oficial">
+            <div class="container flex-between">
+                <div class="identidade-escola">
+                    <img src="escola.jpg" alt="Brasão da Escola 29 de Julho" class="logo-escola">
+                    <div class="textos-titulo">
+                        <span class="subtitulo-rede">Rede Estadual de Ensino • Modelo Cívico-Militar</span>
+                        <h1 class="titulo-escola">Escola 29 de Julho</h1>
+                    </div>
+                </div>
+                <img src="bandeira.jpg" alt="Bandeira do Município" class="logo-cidade">
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="apresentacao">
-            <h1 class="h1-apresentacao">Bem-vindo a nossa escola!!</h1>
-            <p>Aqui construimos conhecimento, criamos valores e preparamos nossos alunos para um futuro melhor.</p>
-            <button class="button-apresentacao">Saiba mais</button>
-        </div>
-
-        <div class="caixas">
-
-            <div class="Noticias">
-                <h1 class="h1-caixas">Notícias</h1>
-                <p class="p-caixas">Fique por dentro de tudo oque acontece na nossa escola.</p>
-                <button class="button-caixa">ver mais</button>
+        <!-- Faixa de apresentação -->
+        <section class="banner-institucional">
+            <div class="container">
+                <div class="conteudo-banner">
+                    <h2>Projetos Pedagógicos e Notícias</h2>
+                    <p>Acompanhe as iniciativas científicas, tecnológicas e os principais acontecimentos da nossa unidade escolar.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="Projetos">
-                <h1 class="h1-caixa">Projetos</h1>
-                <p class="p-caixas">Conheça os projetos que fazem a diferença na nossa escola.</div>p>
-                <button class="button-caixa">Ver mais</button>
+        <!-- Seção 1: Projetos -->
+        <section class="secao-acesso">
+            <div class="container">
+                <h2 class="titulo-escola">Projetos</h2>
+                
+                <div class="grade-informacoes">
+                    <div class="bloco-info">
+                        <img src="programa.jpg" alt="Projeto de Programação">
+                        <h3>Projeto de Programação</h3>
+                        <p>Desenvolvimento de um sistema escolar utilizando Python.</p>
+                    </div>
+
+                    <div class="bloco-info">
+                        <img src="cientista.jpg" alt="Projeto Científico">
+                        <h3>Projeto Científico</h3>
+                        <p>Estudo sobre o impacto da química no meio ambiente.</p>
+                    </div>
+
+                    <div class="bloco-info">
+                        <img src="robotica.jpg" alt="Projeto de Robótica">
+                        <h3>Projeto de Robótica</h3>
+                        <p>Construção de um robô seguidor de linha.</p>
+                    </div>
+                </div>
+
+                <div class="flex-between">
+                    <span></span>
+                    <a href="#" class="link-leia-mais">ver mais... &rarr;</a>
+                </div>
             </div>
+        </section>
 
-            <div class="academico">
-                <h1 class="h1-caixas">Dias acadêmicos</h1>  
-                <p class="p-caixas">Confira o calendário de eventos, formaturas e atividades da escola.</div>p>
-                <button class="button-caixa">Ver mais</button>
-            <div>
-        </div>
+        <!-- Seção 2: Notícias -->
+        <section class="secao-acesso">
+            <div class="container">
+                <h2 class="titulo-escola">Notícias</h2>
+                
+                <div class="grade-informacoes">
+                    <div class="bloco-info">
+                        <img src="aulas.jpg" alt="Volta às Aulas">
+                        <h3>Volta às Aulas</h3>
+                        <p>Confira as novidades para o segundo semestre!</p>
+                    </div>
 
+                    <div class="bloco-info">
+                        <img src="medalhas.jpg" alt="Olimpíadas Escolares">
+                        <h3>Olimpíadas Escolares</h3>
+                        <p>Nossa escola se destaca mais uma vez nas competições!</p>
+                    </div>
+
+                    <div class="bloco-info">
+                        <img src="ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="Novo Laboratório">
+                        <h3>Novo Laboratório</h3>
+                        <p>Espaço será inaugurado na próxima semana.</p>
+                    </div>
+                </div>
+
+                <div class="flex-between">
+                    <span></span>
+                    <a href="#" class="link-leia-mais">ver mais... &rarr;</a>
+                </div>
+            </div>
+        </section>
     </main>
     
-    <footer class="pag-inicial">
-
-        <div class="social-link">
-
-           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-             <i class="fab fa-instagram"></i> Instagram
-           </a>
-
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-             <i class="fab fa-facebook"></i> Facebook 
-            </a>
+    <footer class="rodape-oficial">
+        <div class="container rodape-grid">
+            <div class="coluna-rodape">
+                <h4>Escola Cívico-Militar 29 de Julho</h4>
+                <p>Educação, disciplina e cidadania.</p>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </div>
            
+            <div class="coluna-rodape">
+                <h4>Atendimento e Localização</h4>
+                <address>
+                    <p><strong>Endereço:</strong> Rua Iporá, nº 6, Centro / Zona Urbana, Confresa - MT</p>
+                    <p><strong>Telefone:</strong> (66) 98425-4567</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:Escola29@Gmail.com">Escola29@Gmail.com</a></p>
+                </address>
+            </div>
         </div>
-       
-        <div class="contatos">
 
-        <address>
-         Contato: <a href="mailto:contato@exemplo.com">Escola29@Gmail.com</a>
-        </address>
-
-        <p> Telefone: (66) 98425-4567</p>
-        <p> Endereço:  Rua Iporá, nº 6, Centro / Zona Urbana, Confresa - MT
-        <p>&copy; 2026 Meu site. Todos direitos reservados.</p>
+        <div class="rodape-base">
+            <div class="container">
+                <p>&copy; 2026 Escola Estadual Cívico-Militar 29 de Julho. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
